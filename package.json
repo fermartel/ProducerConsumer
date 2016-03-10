@@ -1,0 +1,28 @@
+{
+	"name": "ProducerConsumer",
+	"version": "1.0.0",
+	"description": "A webscocket based producer / consumer application with multiple generators",
+	"author": "Fernando Martel <fermartel@gmail.com>",
+	
+	"scripts": 
+	{
+		"start": "node index.js",
+		"test": "mocha ./test/*"
+	},
+
+	"dependencies": 
+	{
+		"socket.io": "latest",
+		"socket.io-client": "latest",
+		"bluebird": "latest",
+		"bunyan": "latest"
+	},
+
+	"devDependencies": 
+	{
+		"mocha": "latest",
+		"assert": "latest",
+		"rewire": "latest",
+		"jsdoc": "latest"
+	}
+}
