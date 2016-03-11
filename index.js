@@ -22,6 +22,11 @@ for (let generator in keys) {
 	// Create file for each generator
 	let fileName = 'generator' + id + '.sh';
 	
+	// Create bin folder if it does not exist
+	if (!fs.existsSync(path)) {
+	    fs.mkdirSync(path);
+	}
+	
 	// Write script file
 	fs.writeFile(path + fileName, script, function(err) {
 	    if (err) {
