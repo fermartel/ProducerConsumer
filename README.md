@@ -1,12 +1,16 @@
 # Synopsis
 
-This is a simple Product (Generator) / Consumer (Evaluator) application in which Generators produce arithmetic expressions every 500ms and an Evaluator processes them if valid, returning the results back to the respective Generator. The application is meant to be ran with two Generators, but can be configured to use more. The expressions generated include 2 to 5 operands ranging from -999 to 999 (even though the instructions indicated to use positive integers, this extra functionality was added) with their respective operators (+,-,/,*,%). All of these application defaults can easily be configured by referring to the Configuration section.
+This is a simple Product (Generator) / Consumer (Evaluator) application in which Generators produce arithmetic expressions every 500ms and an Evaluator processes them if valid, returning the results back to the respective Generator. The application is meant to run with two Generators, but can be configured to use more. The expressions generated include 2 to 5 operands ranging from -999 to 999 (even though the instructions indicated to use positive integers, this extra functionality was added) with their respective operators (+,-,/,*,%). All of these application defaults can easily be configured by referring to the Configuration section.
 
 # Motivation
 
 This project is meant to showcase the ability to implement a multi-process communication application (Producer / Consumer) using Node.js' asynchronous event driven framework. It logs all pertinent information and errors, and is fully unit tested and properly documented, using sequence and activity diagrams to convey the details of how the application functions.
 
 A common approach to the Producer / Consumer implementation is to use a queue to hold the messages sent by the Producer(s) so they can be consumed as they are made available. This decouples the Producer from the Consumer and can allow for greater flexibility when scaling the application. For this simple use case, where there are no long running and complex business processes, it would have been unnecessary and, therefore, it was not utilized. Also, to simplify the bi-directional nature of the communication between the Producer and the Consumer, websockets with multiplexing were used, allowing for the Consumer to directly send the expression results back to the Producer via promises.
+
+# Requirements
+
+The application was tested using a MacBook Pro, using OS X El Capitan.
 
 # Installation
 
@@ -40,7 +44,7 @@ Once these commands have successfully executed, it should show all tests passing
 
 # Configuration
 
-The following parameters are used to configure the way the expressions are generated:
+The following parameters, found in the config/evaluator.js file, are used to configure the way the expressions are generated:
 
 ```javascript
 // Maximum value for random operand
@@ -55,7 +59,7 @@ MIN_OPERAND_COUNT: 2,
 OPERATORS: ["+","-","/","*","%"]
 ```
 
-The following parameters are used to configure the way the generators are created. The default setting uses only two:
+The following parameters, found in the config/generator.js file, are used to configure the way the generators are created. The default setting uses only two:
 
 ```javascript
 GENERATORS: {
