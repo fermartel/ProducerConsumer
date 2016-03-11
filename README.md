@@ -6,11 +6,11 @@ This is a simple Product (Generator) / Consumer (Evaluator) application in which
 
 This project is meant to showcase the ability to implement a multi-process communication application (Producer / Consumer) using Node.js' asynchronous event driven framework. It logs all pertinent information and errors, and is fully unit tested and properly documented, using sequence and activity diagrams to convey the details of how the application functions.
 
-A common approach to the Producer / Consumer implementation is to use a queue to hold the messages sent by the Producer(s) so they can be consumed as they are made available. This decouples the Producer from the Consumer and can allow for greater flexibility when scaling the application. For this simple use case, where there are no long running and complex business processes, it would have been unnecessary and, therefore, it was not utilized. Also, to simplify the bi-directional nature of the communication between the Producer and the Consumer, websockets with multiplexing were used, allowing for the Consumer to directly send the expression results back to the Producer via promises.
+A common approach to the Producer / Consumer implementation is to use a queue to hold the messages sent by the Producer(s) so they can be consumed as they are made available. This decouples the Producer from the Consumer and can allow for greater flexibility when scaling the application. For this simple use case, where there are no long running and complex business processes, it would have been unnecessary and was therefore not utilized. Also, to simplify the bi-directional nature of the communication between the Producer and the Consumer, websockets with multiplexing were used, allowing for the Consumer to directly send the expression results back to the Producer via promises.
 
 # Requirements
 
-The application was tested using a MacBook Pro, using OS X El Capitan.
+The application was tested using a MacBook Pro running OS X El Capitan.
 
 # Installation
 
