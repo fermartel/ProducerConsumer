@@ -80,11 +80,11 @@ GENERATORS: {
 
 Sequence Diagram:
 
-![alt tag](https://raw.githubusercontent.com/fermartel/singularity/master/ProducerConsumer/ProducerConsumerSequenceDiagram.png)
+![alt tag](https://raw.githubusercontent.com/fermartel/ProducerConsumer/master/ProducerConsumerSequenceDiagram.png)
 
 Activity Diagram:
 
-![alt tag](https://raw.githubusercontent.com/fermartel/singularity/master/ProducerConsumer/ProducerConsumerActivityDiagram.png)
+![alt tag](https://raw.githubusercontent.com/fermartel/ProducerConsumer/master/ProducerConsumerActivityDiagram.png)
 
 # License
 
