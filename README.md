@@ -40,7 +40,7 @@ To test the application, open up the terminal, go to the root directory, and run
 npm test
 ```
 
-Once these commands have successfully executed, it should show all tests passing, meaning that the application is behaving as expected.
+Once the command has successfully executed, it should show all tests passing, meaning that the application is behaving as expected.
 
 # Configuration
 
